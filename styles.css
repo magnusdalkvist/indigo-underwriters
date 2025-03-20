@@ -340,6 +340,13 @@ footer .content .right {
     --padding-xlarge: 1rem;
     --section-spacing: 72px;
   }
+  .px-lg {
+    margin: 0 1rem;
+  }
+  
+  .px-xl {
+    margin: 0 1rem;
+  }
   h1 {
     font-size: 2rem;
   }
