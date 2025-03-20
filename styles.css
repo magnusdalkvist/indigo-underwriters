@@ -14,7 +14,8 @@
 :root {
   --blue: #1c31a8;
   --yellow: #a27c2b;
-  --shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  --header-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  --box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
   --padding-large: 0px;
   --padding-xlarge: 50px;
   --section-spacing: 100px;
@@ -56,13 +57,13 @@ a {
 }
 
 .px-lg {
-  margin: 0 1rem;
+  margin: 0 2rem;
   padding-left: var(--padding-large);
   padding-right: var(--padding-large);
 }
 
 .px-xl {
-  margin: 0 1rem;
+  margin: 0 2rem;
   padding-left: var(--padding-xlarge);
   padding-right: var(--padding-xlarge);
 }
@@ -74,9 +75,9 @@ p {
 
 h1 {
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 3rem;
   margin: 0;
-  max-width: 700px;
+  max-width: 900px;
 }
 
 h2 {
@@ -125,8 +126,8 @@ nav {
   border-radius: 0.75rem;
   min-height: 75px;
   overflow: hidden;
-  box-shadow: var(--shadow);
-  /* transition: all 500ms, border-radius 500ms; */
+  box-shadow: var(--header-shadow);
+  transition: all 500ms, border-radius 500ms;
 }
 
 nav .nav-wrapper {
@@ -289,7 +290,7 @@ section.ctas .cta-container .cta-wrapper {
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
-  box-shadow: var(--shadow);
+  box-shadow: var(--box-shadow);
 }
 
 img {

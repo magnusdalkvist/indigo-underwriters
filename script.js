@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuButton = document.querySelector(".mobile-menu-button");
   const nav = document.querySelector("nav");
+  const firstHero = document.querySelector(".hero");
   console.log(nav.scrollHeight)
   window.addEventListener("scroll", () => {
-    if (window.scrollY > window.innerHeight / 2) {
+    if (window.scrollY > firstHero.clientHeight - 200) {
       nav.classList.add("scrolled");
     } else {
       nav.classList.remove("scrolled");
