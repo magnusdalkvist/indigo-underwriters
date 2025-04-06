@@ -1,8 +1,17 @@
-document.addEventListener("DOMContentLoaded", () => {
+"use strict";
+(() => {
   const menuButton = document.querySelector(".mobile-menu-button");
   const nav = document.querySelector("nav");
   const firstHero = document.querySelector(".hero");
-  console.log(nav.scrollHeight)
+
+  // Safety check to ensure firstHero exists before adding scroll behavior
+  if (!firstHero) return;
+
+  // Helper to update nav height based on open state
+  const updateNavHeight = () => {
+    nav.style.height = nav.classList.contains("open") ? nav.scrollHeight + "px" : null;
+  };
+
   window.addEventListener("scroll", () => {
     if (window.scrollY > firstHero.clientHeight - 200) {
       nav.classList.add("scrolled");
@@ -10,19 +19,20 @@ document.addEventListener("DOMContentLoaded", () => {
       nav.classList.remove("scrolled");
     }
   });
-  menuButton.addEventListener("click", () => {
-    nav.classList.toggle("open");
-    if (nav.classList.contains("open")) {
-      nav.style.height = nav.scrollHeight + "px";
-    } else {  
-      nav.style.height = null;
-    }
-  })
-  //if any a tag is clicked, close the nav
-  document.querySelectorAll("a").forEach(a => {
-    a.addEventListener("click", () => {
-      nav.classList.remove("open");
-      nav.style.height = null;
+
+  if (menuButton) {
+    menuButton.addEventListener("click", () => {
+      nav.classList.toggle("open");
+      updateNavHeight();
     });
+  }
+
+  // Use event delegation for nav anchor clicks instead of adding individual listeners
+  document.addEventListener("click", (event) => {
+    const anchor = event.target.closest("a");
+    if (anchor && nav.contains(anchor)) {
+      nav.classList.remove("open");
+      updateNavHeight();
+    }
   });
-});
+})();
