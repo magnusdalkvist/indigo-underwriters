@@ -9,77 +9,40 @@
   <body>
     <header>
       <nav>
-        <div class="nav-wrapper">
-          <span class="logo"><span>indigo</span>underwriters</span>
-          <ul class="menu">
-            <li><a href="#hero">Hero</a></li>
-            <li><a href="#indigo">Indigo</a></li>
-            <li><a href="#datterselskab">Datterselskaber</a></li>
-            <li><a href="#about">About Us</a></li>
-          </ul>
-          <div class="menu-items align-right">
-            <a href="mailto:mail2indigo@indigounderwriters.com">mail2indigo@indigounderwriters.com</a>
-            <a href="tel:+4531150065">+45 31 15 00 65</a>
-          </div>
-        </div>
+        <a href="/"><span class="logo"><span>indigo</span>underwriters</span></a>
+        <ul class="menu">
+          <li class="active"><a href="#home">Home</a></li>
+          <li><a href="#about">Indigo</a></li>
+          <li><a href="#subsidiary">Subsidiary</a></li>
+          <li><a href="#services">Services</a></li>
+        </ul>
+        <a href="mailto:mail2indigo@indigounderwriters.com" class="button btn-primary"
+          >mail2indigo@indigounderwriters.com</a
+        >
       </nav>
     </header>
     <main>
-      <section id="hero" class="hero">
-        <div class="content container">
-          <div class="px-xl">
-            <h1>
-              Indigo Group is our flagship – with PhoebeApS and other subsidiaries financing, acquiring, and managing insurance businesses.
-            </h1>
-            <p></p>
-          </div>
+      <section id="home" class="hero full-width">
+        <div class="content">
+          <h1>
+            Indigo Group is our flagship – with PhoebeApS and other subsidiaries financing,
+            acquiring, and managing insurance businesses.
+          </h1>
         </div>
-        <div class="hero-bg-img">
-          <img src="images/pheobe.jpg" alt="Hero background image" />
-        </div>
+        <div class="img"><img src="/images/globe.jpg" alt="Hero background image" /></div>
       </section>
-
-      <!-- Updated CTA section for Indigo departments -->
-      <section class="ctas">
-        <div class="hero-ctas container">
-          <div class="cta-container px-lg">
-            <div class="cta-wrapper">
-              <h2>PhoebeApS</h2>
-              <p>
-                PhoebeApS focuses on investments in the European Insurance Market. With a dedicated
-                team, they finance, acquire and manage insurance businesses within the Indigo Group.
-              </p>
-              <a href="https://phoebeaps.com/" target="_blank">Learn more</a>
+      <section id="about" class="multi-column">
+        <div class="wrapper">
+          <div class="content">
+            <div class="heading">
+              <span>About Us</span>
+              <h2>Indigo Underwriters</h2>
             </div>
-            <div class="cta-wrapper">
-              <h2>Latona</h2>
-              <p>
-                Based in Warsaw, Latona underwrites employee benefits and manages Banc Assurance
-                services for a range of pan-European carriers.
-              </p>
-              <a href="https://latona.pl/Index_ENG.html" target="_blank">Learn more</a>
-            </div>
-            <div class="cta-wrapper">
-              <h2>Trackday Insurance</h2>
-              <p>
-                Offering a market-leading trackday insurance portfolio for both four- and
-                two-wheeled vehicles, available across the EU, UK and Switzerland.
-              </p>
-              <a href="https://trackday.moris.co.uk/" target="_blank">Learn more</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Quote section replaced with About Us information -->
-      <section id="about" class="quote no-space">
-        <div class="container">
-          <div class="content px-xl">
-            <h2 class="blue">About Us</h2>
             <p>
               Indigo Underwriters Ltd (IUL), Indigo Underwriters Danmark ApS (IUD) and Latona S.A.
               are specialist insurance brokers and subsidiary companies of the Indigo Group.
-              <br /><br />
+            </p>
+            <p>
               IUL operates as a Lloyd's coverholder based in the United Kingdom, while IUD, located
               in the heart of Copenhagen, serves as the European counterpart and is a coverholder
               for Lloyd's Insurance Company SA. Further we source reinsurance to Bermuda reinsurance
@@ -88,68 +51,135 @@
             </p>
           </div>
         </div>
+        <div class="img"><img src="/images/kvaesthusgade.jpg" alt="Kvaesthusgade Building" /></div>
       </section>
-      
-      <section id="service2" class="indigo">
-        <div class="container">
+      <section id="subsidiary" class="subsidiary full-width">
+        <div class="wrapper">
           <div class="content">
-            <h2>Service 2</h2>
-            <p>Beskrivelse for service 2.</p>
-            <img src="images/service2.jpg" alt="Service 2" />
+            <h3>PhoebeApS</h3>
+            <p>
+              PhoebeApS focuses on investments in the European Insurance Market. With a dedicated
+              team, they finance, acquire and manage insurance businesses within the Indigo Group.
+            </p>
+            <a href="" class="button btn-secondary">Visit site</a>
           </div>
+          <div class="img"><img src="/images/bishopsgate.jpg" alt="Bishopsgate Building" /></div>
+        </div>
+        <div class="wrapper">
+          <div class="content">
+            <h3>Latona</h3>
+            <p>
+              Based in Warsaw, Latona underwrites employee benefits and manages Banc Assurance
+              services for a range of pan-European carriers.
+            </p>
+            <a href="" class="button btn-secondary">Visit site</a>
+          </div>
+          <div class="img"><img src="/images/warsawa.jpg" alt="Warsaw Building" /></div>
+        </div>
+        <div class="wrapper">
+          <div class="content">
+            <h3>Trackday Insurance</h3>
+            <p>
+              Offering a market-leading trackday insurance portfolio for both four- and two-wheeled
+              vehicles, available across the EU, UK and Switzerland.
+            </p>
+            <a href="" class="button btn-secondary">Visit site</a>
+          </div>
+          <div class="img"><img src="/images/Track-Day-Insurance.jpg" alt="Missing image" /></div>
         </div>
       </section>
-      
-      <section id="service3" class="indigo">
-        <div class="container">
-          <div class="content">
-            <h2>Service 3</h2>
-            <p>Beskrivelse for service 3.</p>
-            <img src="images/service3.jpg" alt="Service 3" />
+      <section id="services" class="services">
+        <div class="multi-column">
+          <div class="wrapper">
+            <div class="content">
+              <div class="heading">
+                <span>Service</span>
+                <h2>Life, Accident & Health Treaty Reinsurance</h2>
+              </div>
+              <p>
+                We offer these services worldwide. Across the carriers we work with we can offer
+                significant capacities for both per event and per person. More than 60 insurers and
+                reinsurers use Indigo Underwriters for their reinsurance needs.
+              </p>
+            </div>
+          </div>
+          <div class="img">
+            <img src="/images/pen.jpg" alt="Pen image" />
+          </div>
+        </div>
+        <div class="multi-column reverse">
+          <div class="wrapper">
+            <div class="content">
+              <div class="heading">
+                <span>Service</span>
+                <h2>Trackday and direct insurance</h2>
+              </div>
+              <p>
+                On the direct insurance front, our flagship offering is our market-leading trackday
+                insurance portfolio, available for both four- and two-wheeled vehicles. This service
+                is open to residents across the EU, UK and Switzerland. We are proud to hold a
+                leading position with dedicated local language offerings in the United Kingdom,
+                France, Germany, Denmark, and Sweden.
+              </p>
+            </div>
+          </div>
+          <div class="img">
+            <img src="/images/Track-Day-Insurance.jpg" alt="Trackday Insurance image" />
+          </div>
+        </div>
+        <div class="multi-column">
+          <div class="wrapper">
+            <div class="content">
+              <div class="heading">
+                <span>Service</span>
+                <h2>Indigo Underwriters</h2>
+              </div>
+              <p>
+                In Warsaw, our Latona subsidiary underwrites a portfolio of employee benefit
+                business in addition to our Banc Assurance business. The operations include
+                property, personal and life insurance segments. The Latona team also has experience
+                in implementing group life insurance programs for employees of companies that care
+                about dedicated service processes with minimal staff involvement and employee
+                satisfaction.
+              </p>
+            </div>
+          </div>
+          <div class="img">
+            <img src="/images/other_services.jpeg" alt="Other services image" />
           </div>
         </div>
       </section>
     </main>
     <footer>
-      <div class="content">
-        <div class="left">
+      <div class="wrapper">
+        <div class="contact">
           <span class="logo"><span>indigo</span>underwriters</span>
           <div>
-            <div class="links">
-              <a href="">Privacy Notice</a>
-              <a href="">Terms and Conditions</a>
-            </div>
-            <p class="hidden-mobile">Copyright © 2024 Indigo Underwriters Denmark</p>
+            <a href="tel:+4531150065">+45 31 15 00 65</a>
+            <a href="mailto:info@indigounderwriters.com">info@indigounderwriters.com</a>
           </div>
         </div>
-        <div class="right" style="display: flex; gap:2rem">
+        <div class="info">
           <address>
             <b>Indigo Underwriters Ltd</b>
             <p>Company Number 07085778</p>
-            <br />  
+            <br />
             <p>Duo Building, 6th Floor</p>
             <p>280 Bishopsgate</p>
             <p>London EC2M 4RB</p>
           </address>
           <address>
             <b>Indigo Underwriters Denmark</b>
+            <p>CVR 39068540</p>
             <br />
-            CVR 39068540
-            <br /><br />
-            Kvaesthusgade 5C,
-            <br />
-            1251 Copenhagen K
-            <br />
-            Denmark
-            <br /><br />
-            <a href="tel:+4531150065">+45 31 15 00 65</a>
-            <br />
-            <a href="mailto:Mail2indigo@indigounderwriters.com">mail2indigo@indigounderwriters.com</a>
+            <p>Kvaesthusgade 5C</p>
+            <p>1251 Copenhagen K</p>
+            <p>Denmark</p>
           </address>
         </div>
-        <p class="hidden-desktop">Copyright © 2024 Indigo Underwriters Denmark</p>
       </div>
+      <span class="copyright">Copyright © 2025 Indigo Underwriters Denmark</span>
     </footer>
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>

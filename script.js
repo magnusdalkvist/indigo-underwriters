@@ -1,38 +1,28 @@
-"use strict";
-(() => {
-  const menuButton = document.querySelector(".mobile-menu-button");
-  const nav = document.querySelector("nav");
-  const firstHero = document.querySelector(".hero");
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("nav ul li a");
+  const headerHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--header-height"));
 
-  // Safety check to ensure firstHero exists before adding scroll behavior
-  if (!firstHero) return;
+  function setActiveLink() {
+    let currentSection = "";
 
-  // Helper to update nav height based on open state
-  const updateNavHeight = () => {
-    nav.style.height = nav.classList.contains("open") ? nav.scrollHeight + "px" : null;
-  };
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - document.documentElement.scrollTop - headerHeight;
+      const sectionHeight = section.offsetHeight;
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > firstHero.clientHeight - 200) {
-      nav.classList.add("scrolled");
-    } else {
-      nav.classList.remove("scrolled");
-    }
-  });
+      if (sectionTop <= 0 && sectionTop + sectionHeight > 0) {
+        currentSection = section.getAttribute("id");
+      }
+    });
 
-  if (menuButton) {
-    menuButton.addEventListener("click", () => {
-      nav.classList.toggle("open");
-      updateNavHeight();
+    navLinks.forEach((link) => {
+      link.parentElement.classList.remove("active");
+      if (link.getAttribute("href").substring(1) === currentSection) {
+        link.parentElement.classList.add("active");
+      }
     });
   }
 
-  // Use event delegation for nav anchor clicks instead of adding individual listeners
-  document.addEventListener("click", (event) => {
-    const anchor = event.target.closest("a");
-    if (anchor && nav.contains(anchor)) {
-      nav.classList.remove("open");
-      updateNavHeight();
-    }
-  });
-})();
+  window.addEventListener("scroll", setActiveLink);
+  setActiveLink(); // Initial call to set the active link on page load
+});
