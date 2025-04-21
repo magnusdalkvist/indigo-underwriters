@@ -9,9 +9,11 @@
   <body>
     <header>
       <nav>
-        <a href="/"><span class="logo"><span>indigo</span>underwriters</span></a>
+        <a href="/"
+          ><span class="logo"><span>indigo</span>underwriters</span></a
+        >
         <ul class="menu">
-          <li class="active"><a href="#home">Home</a></li>
+          <li><a href="#home">Home</a></li>
           <li><a href="#about">Indigo</a></li>
           <li><a href="#subsidiary">Subsidiary</a></li>
           <li><a href="#services">Services</a></li>
@@ -19,7 +21,54 @@
         <a href="mailto:mail2indigo@indigounderwriters.com" class="button btn-primary"
           >mail2indigo@indigounderwriters.com</a
         >
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <svg
+            class="open-menu"
+            width="17"
+            height="14"
+            viewBox="0 0 17 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M1 1H16" stroke-width="2" stroke-linecap="round" />
+            <path d="M1 7H16" stroke-width="2" stroke-linecap="round" />
+            <path d="M1 13H16" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          <svg
+            class="close-menu"
+            width="17"
+            height="17"
+            viewBox="0 0 17 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.1422 1L1.00002 15.1421"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M1.14212 1L15.2843 15.1421"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
       </nav>
+      <div class="menu-slider">
+        <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Indigo</a></li>
+          <li><a href="#subsidiary">Subsidiary</a></li>
+          <li><a href="#services">Services</a></li>
+        </ul>
+        <a href="mailto:mail2indigo@indigounderwriters.com" class="button btn-primary"
+          >mail2indigo@indigounderwriters.com</a
+        >
+      </div>
+      <div class="overlay"></div>
     </header>
     <main>
       <section id="home" class="hero full-width">
