@@ -461,20 +461,20 @@ footer .copyright {
     font-size: 28px;
   }
   .hero h1 {
-    font-size: 36px;
+    font-size: 28px;
   }
   .hero .content {
     padding: 50px 32px;
   }
   .subsidiary .wrapper .content {
-    padding: 32px;
+    padding: 28px;
   }
   .subsidiary .wrapper .content h3 {
     font-size: 28px;
   }
   .multi-column {
     flex-direction: column;
-    padding: 32px;
+    padding: 28px;
     gap: 0;
   }
   .multi-column .content,
@@ -483,7 +483,7 @@ footer .copyright {
     min-width: 0;
   }
   .multi-column .content .heading h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
   .multi-column .content .heading span {
     font-size: 14px;
